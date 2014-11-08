@@ -13,9 +13,14 @@
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <% if signed_in? %>
-          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %><li>
+          <% if current_user %>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %><li>
+          <% elsif current_client %>
+            <li><%= link_to "Sign Out", destroy_client_session_path, method: :delete %><li>
+          <% end %>
         <% else %>
-          <li><%= link_to "Sign In", new_user_session_path %><li>
+          <li class="info"><%= link_to "User Sign In", new_user_session_path %><li>
+          <li class="success"><%= link_to "Client Sign In", new_client_session_path %><li>
         <% end %>
       </ul>
     </div>
