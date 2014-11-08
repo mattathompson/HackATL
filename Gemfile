@@ -13,6 +13,9 @@ gem 'google-api-client'
 gem 'figaro'
 gem 'devise'
 
+# Only needed for Windows 
+gem 'tzinfo-data'
+
 group :development do
   gem 'annotate'
   gem 'better_errors'
