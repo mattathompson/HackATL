@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   validates_presence_of :first_name, :last_name, :email,
                         :encrypted_password, :address, :city,
                         :state, :zip
+  has_many :preferences
+  has_many :prefered_clients, through: :preferences, source: :client
+
 end
