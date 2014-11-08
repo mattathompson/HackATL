@@ -6,6 +6,7 @@ namespace :db do
     puts "..."
     puts
     puts "..."
+    puts
     puts "FINE I'LL WALK."
     puts
   end
