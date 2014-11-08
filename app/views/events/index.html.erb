@@ -1,0 +1,20 @@
+<%= link_to "Create Event", new_event_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Details</th>
+      <th>Remove Preference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @events.each do |e| %>
+      <tr>
+        <td><%= e.name %></td>
+        <td><%= e.details %></td>
+        <td><%= link_to "View", client_events_path(event_id: e.id) %></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
