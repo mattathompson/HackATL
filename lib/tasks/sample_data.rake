@@ -28,7 +28,6 @@ def make_clients
 end
 
 def make_users
-  User.destroy_all
   make_andy
   make_carmen
   make_creighton
