@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Remove Preference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @prefered_clients.each do |c| %>
+      <tr>
+        <td><%= c.name %></td>
+        <td><%= link_to "Remove", remove_preference_path(client_id: c.id), method: :delete %></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
