@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Add Preference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @clients.each do |c| %>
+      <tr>
+        <td><%= c.name %></td>
+        <td><%= link_to "Add", add_preference_path(id: c.id), method: :post %></td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
