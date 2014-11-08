@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :authenticate_client!
 
   def index
     @events = current_client.events.all

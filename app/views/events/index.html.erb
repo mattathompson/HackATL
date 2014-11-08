@@ -13,7 +13,7 @@
       <tr>
         <td><%= e.name %></td>
         <td><%= e.details %></td>
-        <td><%= link_to "View", client_events_path(event_id: e.id) %></td>
+        <td><%= link_to "View", events_path(event_id: e.id) %></td>
       </tr>
     <%end%>
   </tbody>
