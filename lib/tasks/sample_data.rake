@@ -5,7 +5,8 @@ namespace :db do
     puts
     puts "..."
     puts
-    puts "... FINE I'LL WALK"
+    puts "..."
+    puts "FINE I'LL WALK."
     puts
   end
 
@@ -49,14 +50,15 @@ def make_this_user(first_name, last_name, email, password, password_confirmation
 end
 
 def make_this_client(name, email, password, password_confirmation, address, city, state, zip)
-  Client.create!(  name:                  name,
+  Client.create!(name:                  name,
                  email:                 email,
                  password:              password,
                  password_confirmation: password_confirmation,
                  address:               address,
                  city:                  city,
                  state:                 state,
-                 zip:                   zip)
+                 zip:                   zip,
+                 phone:                 "555-555-5555")
 end
 
 def make_andy

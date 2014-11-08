@@ -6,4 +6,7 @@ class Client < ActiveRecord::Base
 
   validates_presence_of :name, :email, :address, :city, :state,
                         :zip, :phone, :phone
+  has_many :preferences
+  has_many :user_preferences, through: :preferences, source: :users                      
+
 end
