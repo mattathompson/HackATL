@@ -10,5 +10,5 @@ class User < ActiveRecord::Base
                         :state, :zip
   has_many :preferences
   has_many :prefered_clients, through: :preferences, source: :client
-
+  has_many :redemptions
 end
