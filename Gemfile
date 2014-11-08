@@ -11,7 +11,7 @@ gem 'jbuilder', '~> 2.0'
 gem "paperclip", "~> 4.2"
 gem 'google-api-client'
 gem 'figaro'
-
+gem 'devise'
 
 group :development do
   gem 'annotate'
