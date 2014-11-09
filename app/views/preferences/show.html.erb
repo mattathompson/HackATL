@@ -6,7 +6,7 @@
     <div class="user_places_list">
       <% @prefered_clients.each do |c| %>
         <div class="row">
-          <div class="user_places_name col-lg-7">
+          <div class="user_places_name col-lg-7 col-md-6 col-sm-7">
             <%= link_to "", remove_preference_path(client_id: c.id), method: :delete, class: "fa fa-remove" %>
             <%= c.name %>
             <div class="user_places_address">
@@ -15,7 +15,7 @@
               <%= c.city %>, <%= c.state %> <%= c.zip %>
             </div>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-5 col-md-6 col-sm-5">
             <%= image_tag(c.logo, class: "user_places_img") %>
           </div>
         </div>
@@ -29,7 +29,7 @@
     <div class="user_places_list">
       <% @clients_to_add.each do |c| %>
         <div class="row">
-          <div class="user_places_name col-lg-7">
+          <div class="user_places_name col-lg-7 col-md-6 col-sm-7">
             <%= link_to "", add_preference_path(id: c.id), method: :post, class: "fa fa-plus" %>
             <%= c.name %>
             <div class="user_places_address">
@@ -38,7 +38,7 @@
               <%= c.city %>, <%= c.state %> <%= c.zip %>
             </div>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-5 col-md-6 col-sm-5">
             <%= image_tag(c.logo, class: "user_places_img") %>
           </div>
         </div>
