@@ -27,5 +27,8 @@
       </div>
     <% end %>
     <%= render "devise/shared/links" %>
+    <%= link_to user_omniauth_authorize_path(:google_oauth2) do %>
+      <p>Sign in with <i class="fa fa-google"></i></p>
+    <% end %>
   </div>
 </div>
