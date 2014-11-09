@@ -272,3 +272,18 @@ h1.signin_lead {
     min-height: 800px;
   }
 }
+
+.mail-btn{
+  color: black;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  border: #1ea1da solid 2px;
+  padding: 5px 5px 10px 5px;
+  border-radius: 15px;
+  width: 275px;
+  background: #1ea1da;
+  &:hover {
+    background-color:rgba(30, 161, 218, 0.3)
+  }
+}
