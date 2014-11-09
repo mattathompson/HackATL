@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   match 'add_preference', to: 'preferences#create', via: [:post]
   match 'remove_preference', to: 'preferences#destroy', via: [:delete]
 
+  match 'user_email', to: 'static_pages#user_mail', via: :get
+
   root 'static_pages#home'
 
   match '/about', to: 'static_pages#about', via: 'get'

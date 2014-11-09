@@ -15,6 +15,11 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def user_mail
+    UserMailer.user_email().deliver
+    redirect_to about_path
+  end
+
   private
 
   def find_clients
