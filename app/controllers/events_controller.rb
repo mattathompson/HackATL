@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
   def index
     @events = current_client.events.all
+    @event = current_client.events.new
   end
 
   def show

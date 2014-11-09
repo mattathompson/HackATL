@@ -1,20 +1,52 @@
-<%= link_to "Create Event", new_event_path %>
+<div class="row">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Details</th>
-      <th>Remove Preference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @events.each do |e| %>
-      <tr>
-        <td><%= e.name %></td>
-        <td><%= e.details %></td>
-        <td><%= link_to "View", events_path(event_id: e.id) %></td>
-      </tr>
-    <%end%>
-  </tbody>
-</table>
+  <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12">
+    <div class="event_places_heading">
+      New Discount Event
+    </div>
+    <div class="event_places_list">
+      <div class="event_places_name">
+        Alright, let's do this!
+      </div>
+      <%= form_for([@client, @event], :html => { :multipart => true }) do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :details %>
+          <%= f.text_area :details, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :main, "Upload Image" %>
+          <%= f.file_field :main, class: "form-control" %>
+        </div>
+        <%= f.submit "Send the Deal!", class: "btn btn-large btn-primary", style: "margin-top: 10px; margin-bottom: 10px;" %><br>
+        <%= f.submit "Send only to NEW Customers", class: "btn btn-large btn-primary", style: "margin-top: 10px; margin-bottom: 10px;" %><Br>
+        <%= f.submit "Send only to LOYAL Customers", class: "btn btn-large btn-primary", style: "margin-top: 10px; margin-bottom: 10px;" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12">
+    <div class="user_places_heading">
+      Past Discount Events:
+    </div>
+    <div class="user_places_list">
+      <% @events.each do |e| %>
+          <div class="event_places_name">
+            <div class="event_places_date">
+              <%= e.main_updated_at.strftime("%B %d, %Y") %>
+            </div>
+            <%= e.name %>
+            <div class="event_places_address">
+              <%= e.details %>
+            </div>
+            <div class="">
+              <%= image_tag(e.main, class: "event_places_img") %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>

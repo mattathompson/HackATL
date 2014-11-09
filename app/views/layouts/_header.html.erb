@@ -29,6 +29,16 @@
             <li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %><li>
           <% elsif current_client %>
+            <li>
+              <%= link_to(events_path) do %>
+                <span class="fa fa-envelope"></span> My Discount Events
+              <% end %>
+            <li>
+            <li>
+              <%= link_to(edit_client_registration_path) do %>
+                <span class="fa fa-cog"></span> Settings
+              <% end %>
+            <li>
             <li><%= link_to "Sign Out", destroy_client_session_path, method: :delete %><li>
           <% end %>
         <% else %>
