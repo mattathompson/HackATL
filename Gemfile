@@ -11,6 +11,7 @@ gem "paperclip", "~> 4.2"
 gem 'google-api-client'
 gem 'figaro'
 gem 'devise'
+gem 'aws-sdk'
 
 # Only needed for Windows
 gem 'tzinfo-data'
