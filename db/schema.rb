@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109083110) do
+ActiveRecord::Schema.define(version: 20141109095443) do
 
   create_table "clients", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -32,13 +32,13 @@ ActiveRecord::Schema.define(version: 20141109083110) do
     t.string   "state"
     t.integer  "zip"
     t.string   "phone"
+    t.string   "color1"
+    t.string   "color2"
+    t.string   "color3"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
-    t.string   "color1"
-    t.string   "color2"
-    t.string   "color3"
   end
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20141109083110) do
     t.time     "start_time"
     t.time     "end_time"
     t.string   "discount"
+    t.date     "date"
   end
 
   create_table "preferences", force: true do |t|
@@ -95,4 +96,3 @@ ActiveRecord::Schema.define(version: 20141109083110) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
->>>>>>> bbc83793c45d99a41e2730da2e2b5513b23c09f4

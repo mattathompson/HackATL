@@ -14,6 +14,18 @@
           <%= f.text_field :name, class: "form-control" %>
         </div>
         <div class="form-group">
+          <%= f.label :start_time %>
+          <%= f.text_field :start_time, placeholder: Time.now.strftime("%H:%M%P"), class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :end_time %>
+          <%= f.text_field :end_time, placeholder: (Time.now+1.hour).strftime("%H:%M%P"), class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :discount %>
+          <%= f.text_field :discount, placeholder: '50%', class: "form-control" %>
+        </div>
+        <div class="form-group">
           <%= f.label :details %>
           <%= f.text_area :details, class: "form-control" %>
         </div>
@@ -21,6 +33,7 @@
           <%= f.label :main, "Upload Image" %>
           <%= f.file_field :main, class: "form-control" %>
         </div>
+        <%= f.hidden_field :date, value: Time.now %>
         <%= f.submit "Send the Deal!", class: "btn btn-large btn-primary", style: "margin-top: 10px; margin-bottom: 10px;" %><br>
         <%= f.submit "Send only to NEW Customers", class: "btn btn-large btn-primary", style: "margin-top: 10px; margin-bottom: 10px;" %><Br>
         <%= f.submit "Send only to LOYAL Customers", class: "btn btn-large btn-primary", style: "margin-top: 10px; margin-bottom: 10px;" %>
@@ -35,7 +48,7 @@
       <% @events.each do |e| %>
           <div class="event_places_name">
             <div class="event_places_date">
-              <%= e.main_updated_at.strftime("%B %d, %Y") %>
+              <%= e.date.strftime("%B %d, %Y") %>
             </div>
             <%= e.name %>
             <div class="event_places_address">
