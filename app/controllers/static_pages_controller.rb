@@ -27,6 +27,7 @@ class StaticPagesController < ApplicationController
     else
       redirect_to :back
     end
+  end
 
   def user_mail
     UserMailer.user_email().deliver

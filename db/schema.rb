@@ -36,6 +36,9 @@ ActiveRecord::Schema.define(version: 20141109042855) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "color1"
+    t.string   "color2"
+    t.string   "color3"
   end
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true
