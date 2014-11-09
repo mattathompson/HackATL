@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
   end
 
   def user_mail
-    UserMailer.user_email().deliver
+    UserMailer.user_email(current_client).deliver
     redirect_to about_path
   end
 
