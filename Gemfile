@@ -13,7 +13,7 @@ gem 'google-api-client'
 gem 'figaro'
 gem 'devise'
 
-# Only needed for Windows 
+# Only needed for Windows
 gem 'tzinfo-data'
 
 group :development do
@@ -37,4 +37,9 @@ group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
 end
