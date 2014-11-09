@@ -1,20 +1,206 @@
 
+body {
+  font-family: 'Maven Pro', sans-serif;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  background-image: url(hackbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1000px;
+}
+
+
+a {
+  color: #1ea1da;
+  font-size: 20px;
+  &:hover {
+    text-decoration: none;
+    color: #1B97CD;
+  }
+}
+
+// NAVIGATION //
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  &:hover {
+
+  }
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: #1ea1da;
+  &:hover {
+    color: #1B97CD
+  }
+}
+
+.navbar-default {
+  background: none;
+}
+
+.navbar-default .navbar-collapse {
+  background: black;
+}
+
+.navbar.navbar-default.navbar-fixed-top {
+  border-color: #696969;
+  background: black;
+}
+
+.nav.navbar-nav.navbar-right a {
+  color: white;
+  font-size: 18px;
+  &:hover {
+    color: rgba(255, 255, 255, 0.84);
+  }
+}
+
+// HOMEPAGE //
+#homepage {
+  background-image: url(hackbg.jpg);
+  //min-height: 500px;
+}
+
+.home_logo {
+  text-align: center;
+  font-size: 250px;
+  font-weight: 900;
+  color: white;
+  margin-top: .3em;
+  letter-spacing: -30px;
+}
+
+.home_slogan {
+  color: white;
+  text-align: center;
+  margin-top: -1em;
+  font-size: 41px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.home_signup {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  border: #1ea1da solid 2px;
+  padding: 5px 5px 10px 5px;
+  border-radius: 15px;
+  width: 275px;
+  background: #1ea1da;
+  &:hover {
+    background-color:rgba(30, 161, 218, 0.3)
+  }
+}
+
 
 .bg-success {
   padding: 15px;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .home_logo {
+    font-size: 208px;
+    letter-spacing: -27px;
+  }
+  .home_slogan {
+    font-size: 38px;
+  }
+}
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .home_logo {
+    font-size: 162px;
+    letter-spacing: -21px;
+  }
+  .home_slogan {
+    font-size: 33px;
+  }
+  .home_signup {
+    width: 159px;
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .home_logo {
+    font-size: 68px;
+    letter-spacing: -9px;
+  }
+  .home_slogan {
+    font-size: 17px;
+    margin-top: -.6em;
+  }
+  .home_signup {
+    width: 124px;
+    font-size: 19px;
+    margin-top: 61px;
+    padding-bottom: 6px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  body {
+    min-height: 700px;
+  }
+  .home_slogan {
+    padding: 0 150px 0 150px;
+  }
+}
+
+@media (min-width: 419px) and (max-width: 600px) {
+  .home_slogan {
+    padding: 0 80px 0 80px;
+  }
+}
+
+@media (max-width: 418px) {
+  body {
+    min-height: 500px;
+  }
+  .home_slogan {
+    padding: 0;
+  }
+}
 // DEVISE //
+
+
+h1.signin_lead {
+  font-weight: 500;
+}
+
+.signin_box {
+  //background: black;
+  margin-top: 10%;
+  padding-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
 
 .signup_link {
   margin-top: 11px;
 }
 
 .login_link {
-
+  margin-top: 11px;
 }
 
 .forgot_password_link {
+  padding-bottom: 20px;
+}
 
+.btn-primary {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  body {
+    min-height: 800px;
+  }
 }

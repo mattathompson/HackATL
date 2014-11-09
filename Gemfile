@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.1.6'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -13,7 +12,7 @@ gem 'google-api-client'
 gem 'figaro'
 gem 'devise'
 
-# Only needed for Windows 
+# Only needed for Windows
 gem 'tzinfo-data'
 
 group :development do
@@ -31,10 +30,16 @@ group :development, :test do
   gem 'factory_girl_rails', require: false
   gem 'faker'
   gem 'rspec-rails'
+  gem 'sqlite3'
 end
 
 group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
 end

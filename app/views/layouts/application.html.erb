@@ -7,18 +7,23 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,500,700' rel='stylesheet' type='text/css'>
+
+  <style>
+
+  </style>
 
 </head>
-<body>
+<body id="<%= yield(:bodyid) %>">
   <%= render 'layouts/header' %>
 
   <div class="container">
 
     <% if notice %>
-      <p class="bg-success"><%= notice %></p>
+      <!-- <p class="bg-success"><%= notice %></p> -->
     <% end %>
     <% if alert %>
-      <p class="alert bg-info"><%= alert %></p>
+      <!-- <p class="alert bg-info"><%= alert %></p> -->
     <% end %>
 
     <%= yield %>

@@ -1,7 +1,20 @@
-<h1>Hello World!</h1>
+<% provide(:bodyid, "homepage") %>
 
-<h2>Users:</h2>
+<div class="home_logo col-sm-12">
+  GoNowGo!
+</div>
 
-<% @users.each do |user| %>
-  <p><%= user.first_name %> <%= user.last_name %></p>
-<% end %>
+<div class="home_slogan col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+  Get notified of real-time discounts when your favorite places have extra space
+</div>
+
+
+<div class="col-sm-12">
+  <center>
+    <%= link_to(new_user_registration_path) do %>
+      <div class="home_signup">
+        Sign Up
+      </div>
+    <% end %>
+  </center>
+</div>
