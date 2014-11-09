@@ -15,6 +15,7 @@ class StaticPagesController < ApplicationController
 
   end
 
+
   def logo
     @client = current_client
   end
@@ -26,6 +27,10 @@ class StaticPagesController < ApplicationController
     else
       redirect_to :back
     end
+
+  def user_mail
+    UserMailer.user_email().deliver
+    redirect_to about_path
   end
 
   private

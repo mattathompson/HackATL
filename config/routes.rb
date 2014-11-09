@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   match 'client/:id/logo', to: 'static_pages#logo', via: :get, as: "client_logo"
   match 'client/:id/savelogo', to: 'static_pages#savelogo', via: :post, as: "save_logo"
 
+  match 'user_email', to: 'static_pages#user_mail', via: :get
+
+
   resources :events
 
   root 'static_pages#home'
