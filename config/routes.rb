@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   match 'preferences/new', to: 'preferences#new', via: :get
   match 'add_preference', to: 'preferences#create', via: [:post]
   match 'remove_preference', to: 'preferences#destroy', via: [:delete]
-
+  match 'client/:id/logo', to: 'static_pages#logo', via: :get, as: "client_logo"
+  match 'client/:id/savelogo', to: 'static_pages#savelogo', via: :post, as: "save_logo"
 
   resources :events
 
