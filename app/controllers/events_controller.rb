@@ -55,7 +55,7 @@ class EventsController < ApplicationController
 
 
   def create_params
-    params[:event].permit(:name, :details)
+    params[:event].permit(:name, :details, :main)
   end
 
 
