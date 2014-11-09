@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   before_action :find_clients
 
   def home
-    @users = User.order(:first_name)
+
   end
 
   def about

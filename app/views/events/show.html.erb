@@ -2,3 +2,4 @@
 <p><%= @event.details %></p>
 <%= link_to "Edit", edit_event_path(@event) %>
 <%= link_to "Remove Event", event_path(@event), method: :delete %>
+<%= image_tag @event.main %>
