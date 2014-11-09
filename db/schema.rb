@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -12,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109064320) do
+ActiveRecord::Schema.define(version: 20141109083110) do
 
   create_table "clients", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -53,6 +52,9 @@ ActiveRecord::Schema.define(version: 20141109064320) do
     t.string   "main_content_type"
     t.integer  "main_file_size"
     t.datetime "main_updated_at"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.string   "discount"
   end
 
   create_table "preferences", force: true do |t|
