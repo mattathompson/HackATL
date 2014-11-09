@@ -1,5 +1,7 @@
 class PreferencesController < ApplicationController
+
   before_action :find_prefered_clients, except: [:show]
+  before_action :authenticate_user!
 
   def show
     @prefered_clients = current_user.prefered_clients
