@@ -6,9 +6,9 @@ class PreferencesController < ApplicationController
   def show
     # my_preferences = Preference.where("user_id = ?", current_user.id).pluck(:client_id)
     # @prefered_clients = Client.where(:id => my_preferences)
-    @prefered_clients = current_user.prefered_clients
+    @prefered_clients = current_user.prefered_clients.order("name")
     prefered_ids = @prefered_clients.ids
-    @clients_to_add = Client.where.not(:id => prefered_ids)
+    @clients_to_add = Client.where.not(:id => prefered_ids).order("name")
   end
 
 

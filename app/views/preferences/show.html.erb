@@ -30,7 +30,7 @@
       <% @clients_to_add.each do |c| %>
         <div class="row">
           <div class="user_places_name col-lg-7">
-            <%= link_to "", remove_preference_path(client_id: c.id), method: :delete, class: "fa fa-remove" %>
+            <%= link_to "", add_preference_path(id: c.id), method: :post, class: "fa fa-plus" %>
             <%= c.name %>
             <div class="user_places_address">
               <%= c.address %>

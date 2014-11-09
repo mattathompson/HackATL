@@ -17,7 +17,16 @@
       <ul class="nav navbar-nav navbar-right">
         <% if signed_in? %>
           <% if current_user %>
-            <li><%= link_to "", edit_user_registration_path, class: "fa fa-cog" %><li>
+            <li>
+              <%= link_to(preferences_path) do %>
+                <span class="fa fa-star"></span> My Places
+              <% end %>
+            <li>
+            <li>
+              <%= link_to(edit_user_registration_path) do %>
+                <span class="fa fa-cog"></span> Settings
+              <% end %>
+            <li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %><li>
           <% elsif current_client %>
             <li><%= link_to "Sign Out", destroy_client_session_path, method: :delete %><li>
