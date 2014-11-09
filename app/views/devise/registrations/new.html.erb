@@ -37,6 +37,20 @@
           <%= f.email_field :last_name, class: "form-control" %>
         </div>
       <% end %>
+      <% if @class_name == "Client" %>
+        <div class="form-group">
+          <%= f.label :color1, "Primary Color" %><br />
+          <%= f.color_field :color1, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :color2, "Secondary Color" %><br />
+          <%= f.color_field :color2, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :color3, "Accent Color" %><br />
+          <%= f.color_field :color3, class: "form-control" %>
+        </div>
+      <% end %>
 
       <div class="form-group">
         <%= f.label :address, "Address" %><br />

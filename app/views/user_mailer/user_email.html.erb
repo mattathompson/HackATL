@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <font color= <%= @client.color %>> <%= client.name %></color>
   </head>
-  <body>
+  <body style= "background-color:<%= @client.color1 %>">
+    <h1>
+    <font color= <%= @client.color3 %>>  Have we got a deal for you! </color>
+        <img src=<%= @client.logo %> alt="LOGO" height="100" width="100">
+    </h1>
     <h3>
-      <center>
-        <img src="http://api.qrserver.com/v1/create-qr-code/?data=http//google.com&size=200x200">
-      </center>
+        <img src="http://api.qrserver.com/v1/create-qr-code/?data=http//google.com&size=100x100"><br>
+        <font color= <%= @client.color2 %>>Present this code to your cashier when you checkout, for 50% off</color>
     </h3>
   </body>
 </html>
