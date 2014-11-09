@@ -1,16 +1,48 @@
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Remove Preference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @prefered_clients.each do |c| %>
-      <tr>
-        <td><%= c.name %></td>
-        <td><%= link_to "Remove", remove_preference_path(client_id: c.id), method: :delete %></td>
-      </tr>
-    <%end%>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12">
+    <div class="user_places_heading">
+      My Places:
+    </div>
+    <div class="user_places_list">
+      <% @prefered_clients.each do |c| %>
+        <div class="row">
+          <div class="user_places_name col-lg-7 col-md-6 col-sm-7">
+            <%= link_to "", remove_preference_path(client_id: c.id), method: :delete, class: "fa fa-remove" %>
+            <%= c.name %>
+            <div class="user_places_address">
+              <%= c.address %>
+              <br>
+              <%= c.city %>, <%= c.state %> <%= c.zip %>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-5">
+            <%= image_tag(c.logo, class: "user_places_img") %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12">
+    <div class="user_places_heading">
+      Nearby Places to Add:
+    </div>
+    <div class="user_places_list">
+      <% @clients_to_add.each do |c| %>
+        <div class="row">
+          <div class="user_places_name col-lg-7 col-md-6 col-sm-7">
+            <%= link_to "", add_preference_path(id: c.id), method: :post, class: "fa fa-plus" %>
+            <%= c.name %>
+            <div class="user_places_address">
+              <%= c.address %>
+              <br>
+              <%= c.city %>, <%= c.state %> <%= c.zip %>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6 col-sm-5">
+            <%= image_tag(c.logo, class: "user_places_img") %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

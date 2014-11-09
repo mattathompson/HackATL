@@ -19,13 +19,14 @@ namespace :db do
 end
 
 def make_clients
-  burger_win
+  make_burger_win
   make_rathbuns
   make_figo
   make_rias
   make_brick_store
   make_taqueria
   make_jacks
+  make_six_feet
 end
 
 def make_users
@@ -215,7 +216,7 @@ def make_rathbuns
   make_this_client(name, email, password, password_confirmation, address, city, state, zip)
 end
 
-def burger_win
+def make_burger_win
   name = "Burger Win"
   email = "burgerwin@example.com"
   password = "caseyokeefe"
@@ -224,5 +225,17 @@ def burger_win
   city = "Atlanta"
   state = "GA"
   zip = 30316
+  make_this_client(name, email, password, password_confirmation, address, city, state, zip)
+end
+
+def make_six_feet
+  name = "Six Feet Under"
+  email = "sixfeet@example.com"
+  password = "caseyokeefe"
+  password_confirmation = "caseyokeefe"
+  address = "685 11th St NW"
+  city = "Atlanta"
+  state = "GA"
+  zip = 30318
   make_this_client(name, email, password, password_confirmation, address, city, state, zip)
 end

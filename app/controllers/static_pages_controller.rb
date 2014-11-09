@@ -4,6 +4,15 @@ class StaticPagesController < ApplicationController
   before_action :find_clients
 
   def home
+    if current_user || current_client
+      if current_user
+        redirect_to preferences_path
+      else
+        redirect_to events_path
+      end
+    else
+
+    end
 
   end
 

@@ -12,6 +12,8 @@ gem 'google-api-client'
 gem 'figaro'
 gem 'devise'
 gem 'aws-sdk'
+gem 'omniauth-google-oauth2'
+gem 'omniauth'
 
 # Only needed for Windows
 gem 'tzinfo-data'

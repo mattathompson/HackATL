@@ -4,7 +4,11 @@ class PreferencesController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @prefered_clients = current_user.prefered_clients
+    # my_preferences = Preference.where("user_id = ?", current_user.id).pluck(:client_id)
+    # @prefered_clients = Client.where(:id => my_preferences)
+    @prefered_clients = current_user.prefered_clients.order("name")
+    prefered_ids = @prefered_clients.ids
+    @clients_to_add = Client.where.not(:id => prefered_ids).order("name")
   end
 
 
@@ -28,9 +32,9 @@ class PreferencesController < ApplicationController
 
 
   def destroy
-    @client = current_user.prefered_clients.find params[:client_id]
+    @preference = current_user.preferences.find params[:client_id]
 
-    if @client.destroy!
+    if @preference.destroy!
       redirect_to preferences_path
     else
       redirect_to :back
