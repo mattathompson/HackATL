@@ -39,7 +39,9 @@ class StaticPagesController < ApplicationController
   end
 
   def user_mail
-    UserMailer.user_email(current_client).deliver
+    current_client.user_preferences.each do |user|
+        UserMailer.user_email(current_client, user).deliver
+    end
     redirect_to about_path
   end
 
