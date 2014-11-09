@@ -246,8 +246,6 @@ DEPENDENCIES
   launchy
   letter_opener
   paperclip (~> 4.2)
-  quiet_assets
-  rails (= 4.1.6)
   pg (= 0.15.1)
   pry-rails
   quiet_assets
