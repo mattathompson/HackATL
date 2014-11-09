@@ -1,11 +1,121 @@
 
+body {
+  font-family: 'Maven Pro', sans-serif;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  background-image: url(hackbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 700px;
+}
+
+
+a {
+  color: #1ea1da;
+  font-size: 20px;
+  &:hover {
+    text-decoration: none;
+    color: #1B97CD;
+  }
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  &:hover {
+
+  }
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: #1ea1da;
+  &:hover {
+    color: #1B97CD
+  }
+}
+
+.navbar-default {
+  background: none;
+}
+
+.navbar-default .navbar-collapse {
+  background: black;
+}
+
+.navbar.navbar-default.navbar-fixed-top {
+  border-color: #696969;
+}
+
+.nav.navbar-nav.navbar-right a {
+  color: white;
+  font-size: 18px;
+  &:hover {
+    color: rgba(255, 255, 255, 0.84);
+  }
+}
+
+#homepage {
+  background-image: url(hackbg.jpg);
+  min-height: 500px;
+}
+
+.home_logo {
+  text-align: center;
+  font-size: 250px;
+  font-weight: 900;
+  color: white;
+  margin-top: .3em;
+  letter-spacing: -30px;
+}
+
+.home_slogan {
+  color: white;
+  text-align: center;
+  margin-top: -1em;
+  font-size: 41px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.home_signup {
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+  border: #1ea1da solid 2px;
+  padding: 5px 5px 10px 5px;
+  border-radius: 15px;
+  width: 275px;
+  background: #1ea1da;
+  &:hover {
+    background-color:rgba(30, 161, 218, 0.3)
+  }
+}
+
 
 .bg-success {
   padding: 15px;
 }
 
 
+
+
 // DEVISE //
+
+
+h1.signin_lead {
+  font-weight: 500;
+}
+
+.signin_box {
+  //background: black;
+  margin-top: 10%;
+  padding-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.7)
+}
 
 .signup_link {
   margin-top: 11px;
@@ -16,5 +126,9 @@
 }
 
 .forgot_password_link {
+  padding-bottom: 20px;
+}
 
+.btn-primary {
+  font-size: 20px;
 }
