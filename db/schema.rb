@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109033801) do
+ActiveRecord::Schema.define(version: 20141109042855) do
 
   create_table "clients", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -35,15 +35,23 @@ ActiveRecord::Schema.define(version: 20141109033801) do
     t.string   "color1"
     t.string   "color2"
     t.string   "color3"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true
   add_index "clients", ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true
 
   create_table "events", force: true do |t|
-    t.string  "name"
-    t.text    "details"
-    t.integer "client_id"
+    t.string   "name"
+    t.text     "details"
+    t.integer  "client_id"
+    t.string   "main_file_name"
+    t.string   "main_content_type"
+    t.integer  "main_file_size"
+    t.datetime "main_updated_at"
   end
 
   create_table "preferences", force: true do |t|

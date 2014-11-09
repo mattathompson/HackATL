@@ -15,6 +15,20 @@ class StaticPagesController < ApplicationController
 
   end
 
+
+  def logo
+    @client = current_client
+  end
+
+  def savelogo
+    current_client.update_attributes logo_params
+    if current_client.save!
+      redirect_to root_path
+    else
+      redirect_to :back
+    end
+  end
+
   def user_mail
     UserMailer.user_email().deliver
     redirect_to about_path
@@ -24,6 +38,10 @@ class StaticPagesController < ApplicationController
 
   def find_clients
     @clients = Client.all
+  end
+
+  def logo_params
+    params.permit(:logo)
   end
 
 end

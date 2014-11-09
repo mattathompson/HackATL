@@ -16,7 +16,30 @@
             </div>
           </div>
           <div class="col-lg-5">
-            <img class="user_places_img" src="http://fortitudesign.com/wp-content/uploads/figo-4.jpg">
+            <%= image_tag(c.logo, class: "user_places_img") %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 col-sm-12">
+    <div class="user_places_heading">
+      Nearby Places to Add:
+    </div>
+    <div class="user_places_list">
+      <% @clients_to_add.each do |c| %>
+        <div class="row">
+          <div class="user_places_name col-lg-7">
+            <%= link_to "", remove_preference_path(client_id: c.id), method: :delete, class: "fa fa-remove" %>
+            <%= c.name %>
+            <div class="user_places_address">
+              <%= c.address %>
+              <br>
+              <%= c.city %>, <%= c.state %> <%= c.zip %>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <%= image_tag(c.logo, class: "user_places_img") %>
           </div>
         </div>
       <% end %>
