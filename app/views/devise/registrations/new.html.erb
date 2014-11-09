@@ -26,16 +26,16 @@
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
       </div>
 
-      <% if @class_name == "User" %>
-      <div class="form-group">
-        <%= f.label :first_name, "First Name" %><br />
-        <%= f.email_field :first_name, class: "form-control" %>
-      </div>
+      <% if f.object_name == :user %>
+        <div class="form-group">
+          <%= f.label :first_name, "First Name" %><br />
+          <%= f.email_field :first_name, class: "form-control" %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :last_name, "Last Name" %><br />
-        <%= f.email_field :last_name, class: "form-control" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :last_name, "Last Name" %><br />
+          <%= f.email_field :last_name, class: "form-control" %>
+        </div>
       <% end %>
 
       <div class="form-group">
