@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
@@ -11,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141109042855) do
+ActiveRecord::Schema.define(version: 20141109064320) do
 
   create_table "clients", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -32,13 +33,13 @@ ActiveRecord::Schema.define(version: 20141109042855) do
     t.string   "state"
     t.integer  "zip"
     t.string   "phone"
-    t.string   "color1"
-    t.string   "color2"
-    t.string   "color3"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "color1"
+    t.string   "color2"
+    t.string   "color3"
   end
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true
@@ -84,6 +85,8 @@ ActiveRecord::Schema.define(version: 20141109042855) do
     t.string   "city"
     t.string   "state"
     t.integer  "zip"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
