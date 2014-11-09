@@ -1,9 +1,10 @@
 <div class="row">
-  <div class="signin_box col-md-4 col-md-offset-4">
+  <div class="signin_box col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2">
 
-    <h2>Log in</h2>
+    <h1 style="signin_lead">Log in</h1>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
       <div class="form-group">
         <%= f.email_field :email, autofocus: true, placeholder: 'Email address', class: "form-control" %>
       </div>
