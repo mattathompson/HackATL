@@ -32,13 +32,13 @@ ActiveRecord::Schema.define(version: 20141109042855) do
     t.string   "state"
     t.integer  "zip"
     t.string   "phone"
+    t.string   "color1"
+    t.string   "color2"
+    t.string   "color3"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
-    t.string   "color1"
-    t.string   "color2"
-    t.string   "color3"
   end
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true
